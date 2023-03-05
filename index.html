@@ -5,24 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
     <h2>Textarea</h2>
     <p>The textarea element defines a multi-line input field.</p>
-
     <form>
-      <textarea name="message" rows="10" cols="30">I am learning JS with Pavel.</textarea>
-      <input type="submit">
+      <textarea id='userString' name="message" rows="10" cols="30">barev</textarea>
+      <button type='button' onclick='counter()'>calculate</button>
+      <!-- <input onclick='counter()' type="submit" value='calculate'> -->
     </form>
     <button onclick="changeBackground()">Change Background</button>
-<ul>
-    <li>words: <span>0</span></li>
-    <li>letters: <span>0</span> </li>
-    <li>spaces: <span>0</span></li>
-</ul>
-
-    <script src="script.js"></script>
+    <ul>
+        <li>words: <span id='words'>0</span></li>
+        <li>letters: <span id='letters'>0</span> </li>
+        <li>sentences: <span id='sentences'>0</span></li>
+    </ul>
+    <script src="./script.js"></script>
 </body>
 </html>
