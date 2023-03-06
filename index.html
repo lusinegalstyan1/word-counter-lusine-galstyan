@@ -8,19 +8,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Textarea</h2>
-    <p>The textarea element defines a multi-line input field.</p>
-    <form>
-      <textarea id='userString' name="message" rows="10" cols="30">barev</textarea>
-      <button type='button' onclick='counter()'>calculate</button>
-      <!-- <input onclick='counter()' type="submit" value='calculate'> -->
-    </form>
-    <button onclick="changeBackground()">Change Background</button>
-    <ul>
-        <li>words: <span id='words'>0</span></li>
-        <li>letters: <span id='letters'>0</span> </li>
-        <li>sentences: <span id='sentences'>0</span></li>
-    </ul>
+    <div class="wrapper">
+        <main class="main__content">
+            <div class="container">
+                <h1>Word Counter</h1>
+                <p>The textarea element defines a multi-line input field.</p>
+                <div class="content__box">
+                    <textarea class="input__text" id='userString' name="message" rows="10" cols="30">barev</textarea>
+                    <button class="calc" type='button' onclick='counter()'>calculate</button>
+                    <!-- <input onclick='counter()' type="submit" value='calculate'> -->
+                    <button class="color" onclick="changeBackground()">colorize</button>
+                    <ul class="result__list">
+                        <li class="list__item">words: <span id='words'>0</span></li>
+                        <li class="list__item">letters: <span id='letters'>0</span></li>
+                        <li class="list__item">sentences: <span id='sentences'>0</span></li>
+                    </ul>
+            </div>
+            </div>
+        </main>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
