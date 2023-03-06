@@ -2,7 +2,7 @@
 // let userString = "I am learning JS with Pavel.";
 
 const userString = document.querySelector("#userString");
-
+console.log(userString.value.split(""));
 const words = document.querySelector("#words");
 const letters = document.querySelector("#letters");
 const sentences = document.querySelector("#sentences");
@@ -13,8 +13,24 @@ function countWords() {
 }
 
 function countLetters() {
-	let amountOfLetters = userString.value.split("").length;
-	letters.innerText = amountOfLetters;
+	let amountOfLetters = userString.value.split("");
+	let result = 0;
+	for (let el of amountOfLetters) {
+		if (
+			el == " " ||
+			el == "!" ||
+			el == "." ||
+			el == "," ||
+			el == ";" ||
+			el == "?" ||
+			el == "..."
+		) {
+			continue;
+		} else {
+			result++;
+		}
+	}
+	return (letters.innerText = result);
 }
 
 function countSentences() {
@@ -38,6 +54,6 @@ function changeBackground() {
 		"#F1948A",
 		"#D35400",
 	];
-	var randomColor = colors[Math.floor(Math.random() * colors.length)];
+	let randomColor = colors[Math.floor(Math.random() * colors.length)];
 	document.body.style.backgroundColor = randomColor;
 }
