@@ -1,26 +1,27 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Word counter</title>
 </head>
 <body>
     <h2>Textarea</h2>
     <p>The textarea element defines a multi-line input field.</p>
     <form>
-      <textarea id='userString' name="message" rows="10" cols="30">barev</textarea>
-      <button type='button' onclick='counter()'>calculate</button>
-      <!-- <input onclick='counter()' type="submit" value='calculate'> -->
+      <textarea id='userString' name="message" rows="10" cols="30" oninput='counter()'>Salut!</textarea>
+      <button type='button' onclick='counter()'>Calculate</button>
     </form>
     <button onclick="changeBackground()">Change Background</button>
     <ul>
-        <li>words: <span id='words'>0</span></li>
-        <li>letters: <span id='letters'>0</span> </li>
-        <li>sentences: <span id='sentences'>0</span></li>
+        <li>Words: <span id='words'>0</span></li>
+        <li>Letters: <span id='letters'>0</span></li>
+        <li>Sentences: <span id='sentences'>0</span></li>
     </ul>
     <script src="./script.js"></script>
 </body>
 </html>
+
